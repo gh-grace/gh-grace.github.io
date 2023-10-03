@@ -1,0 +1,28 @@
+html{ 
+    font-size: 100px; 
+}
+
+.box {
+    border:2px dashed red;
+}
+
+.text { 
+    border: 1rem dashed blue; 
+    padding: 10rem; 
+    /* padding is pushing the content away from the border */ 
+    background: lightblue; 
+    /* shows padding and content */ 
+    /* margin: -10px 0px 0px 0px */
+    font-size: 1px; 
+
+}
+
+/* can  use classes as many times as you want 
+/* can only use id once 
+/* px are absolute measurements 
+
+/* ems and rems 
+/* view width (% of a page) and height 
+/* percentages
+
+/* rem is based on the root element 
