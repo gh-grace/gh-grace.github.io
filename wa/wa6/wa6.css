@@ -1,0 +1,57 @@
+body { 
+    background-image: url('football.jpg'); 
+    background-size:cover; 
+    background-repeat: no-repeat;  
+    display: flex; 
+    margin: 0; 
+}
+
+article{ 
+    padding: 0 2em 0 2em; 
+    margin: 0;
+    float: center; 
+}
+
+.homescore { 
+    position: fixed; 
+    bottom: 80px; 
+    right: 100px;
+    width: 300px;
+    height: 75px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+    background-color: black; 
+    border: 2mm solid gold;
+    align-content: center;
+    float: center; 
+}
+
+.awayscore { 
+    position: fixed;  
+    bottom: 80px; 
+    left: 100px;
+    width: 300px;
+    height: 75px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+    background-color: purple;
+    border: 2mm solid white;
+    align-content: center; 
+    float: center; 
+}
+
+.logo { 
+    position: fixed;
+    top: 20mm;
+    left: 20mm;
+    border: 1mm solid white; 
+}
+
+.logo img { 
+    width: 150px; 
+    height: 50px; 
+}
