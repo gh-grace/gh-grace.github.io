@@ -1,0 +1,66 @@
+/* animations are great if you just want something to be happening on the page */ 
+
+p {
+    font-size: 5vw;
+}
+
+/* class use .delay, id use #delay */ 
+.delay { 
+    animation-duration: 4s;
+    animation-name: slidein; 
+    animation-iteration-count: infinite; 
+    animation-direction: alternate; 
+}
+
+@keyframes slidein{ 
+    /* starts from 0 */ 
+    from {
+        /* slide everything from left to righ pushing it off the screen */
+        margin-left: 100%; 
+        /* sets width to be very large */
+        width: 300%; 
+    }
+
+    50% { 
+        color: greenyellow ; 
+        font-size: 50vw; 
+    }
+
+    /* to is whatever duration is (100%) */
+    to { 
+        margin-left: 0%;
+        width: 100%; 
+    }
+}
+
+.getbig { 
+    animation: 3s infinite alternate getbig; 
+}
+
+@keyframes getbig { 
+    from { 
+        font-zie: 1vw; 
+        color: red; 
+    }
+
+    to { 
+        font-size: 100vw; 
+        color: blue; 
+    }
+}
+
+/* transitions - really good if you want something hidden until you hover over it, requires user input for something to happen */ 
+
+/* generally how navbars are made */ 
+#hover { 
+    font-size: 5vw; 
+    transition-property: font-size; 
+    transition-duration: 3s; 
+    transition-delay: 0.25s; 
+}
+
+/* hover id, when someone hovers over it with thier mouse, increase font size to 15vw */
+#hover:hover { 
+    font-size: 15vw;
+    color: purple; 
+}
