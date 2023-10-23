@@ -1,11 +1,11 @@
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: pink;
     font-style: oblique;
 }
-nav{
+nav {
     height: 50vh;
     display:flex;
     flex-direction: row;
@@ -13,13 +13,13 @@ nav{
     height:20px;
     background-color: limegreen;
 }
-nav a{
+nav a {
     width:10vw;
     text-align: center;
     text-decoration: none;
     color: lavender;
 }
-img{
+img {
     width:30vw;
     height: 30vh;
 }
@@ -28,7 +28,7 @@ img:hover {
     /* shifting 
     transform: translate(100px); */ 
 }
-#red-ball{
+#red-ball {
     background-color: yellow;
     width: 20px;
     height:20px;
@@ -36,23 +36,35 @@ img:hover {
     position: absolute;
     left:5vw;
     top:0;
+    /* this is an animation using a transition */ 
+    transition-delay: 2s;
+    transition-duration: 5s;
+    transition-property: margin-right; 
+    transition-timing-function: ease-in-out; 
 
+    /* this is for a transition
     animation-name: getBig; 
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    animation-direction: normal; 
+    animation-direction: normal; */
 }
-@keyframes getBig {
+#red-ball:hover {
+    background-color: lightblue; 
+    width: 400px; 
+    height: 700px; 
+}
+/* this is a transition */
+/* @keyframes getBig { */
     /* can also do 0% */ 
-    from { 
-        transform: scale(0);
+    /*  from { */
+        /* transform: scale(0); */
         /* margin: 0 100% 100% 0; */ 
-        transform: translate(0 , 0); 
-    }
+        /* transform: translate(0 , 0); */
+    /* } */
     /* can also do 100% */ 
-    to{ 
-        transform: scale(5);
+    /* to{ */
+        /* transform: scale(5); */
         /* margin: 100% 0 0 100%; */  
-        transform: translate(100vw, 100vh);
-    }
-}
+        /* transform: translate(100vw, 100vh); */
+    /* } */
+/* } */
