@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blue;
+    font-style: serif; 
+}
+nav {
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: purple;
+}
+nav a {
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
