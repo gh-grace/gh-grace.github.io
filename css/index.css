@@ -17,18 +17,24 @@ nav {
     justify-content: space-around;
     height:20px;
     background-color: #440254;
-    margin: 0; 
+    margin: 10px 0px 0px 0px; 
     padding: 0;
 }
 nav a {
     text-align: center;
     text-decoration: none;
     color: #FFE8B8; 
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
+#Oct, #Nov, #Dec, #Jan, #Feb, #Mar, #Apr { 
+    border: 10px solid #440254;
+    margin: 0px 75px 50px 75px;
+    padding: 0px 50px 0px 50px;
+}
 p { 
-    padding: 0px 75px 0px 75px; 
+    text-align: left;
+    padding: 50px 75px 50px 75px; 
 }
 @media screen and (min-width: 1500px) { 
     body { 
