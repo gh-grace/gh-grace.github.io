@@ -11,7 +11,7 @@ body {
 }
 nav {
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -22,10 +22,12 @@ nav {
 }
 nav a {
     text-align: center;
-    text-decoration: none;
     color: #FFE8B8; 
     margin: 0;
     padding: 0;
+}
+nav a:hover { 
+    font-weight: bold; 
 }
 #Oct, #Nov, #Dec, #Jan, #Feb, #Mar, #Apr { 
     border: 10px solid #440254;
