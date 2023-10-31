@@ -24,7 +24,7 @@
 </head>
 <body>
     <button type="button">Player 1: Chris</button>
-    <button id="press" type="button">Press me</button>
+    <div id="press">Press me</div>
 
     <script> 
         // variables defined using 'const' or 'let'
@@ -36,8 +36,12 @@
         
         // like defining 
         function updateName() { 
-            let name = prompt("Enter a new name");
-            button.textContent = 'Player 1: s{name}';
+            // let name = prompt("Enter a new name");
+            let name = 10;
+            console.log("The function ran correctly")
+            console.log(name);
+            //button.textContent = `Player 1 : s{name}`;
+            press.innerHTML = `<h1>Hello!</h1>` 
         }
     </script>
 </body>
