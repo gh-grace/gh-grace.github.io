@@ -1,6 +1,7 @@
 body {
-    font-family: helvetica, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     width: 350px;
+    background-color: rgb(142, 19, 19);
   }
 
   label {
@@ -9,16 +10,29 @@ body {
 
   div {
     padding-bottom: 20px;
+    color: white; 
   }
 
   input[type="text"] {
     padding: 5px;
     width: 150px;
+    background-color: plum;
   }
 
   p {
     background: #ffc125;
-    color: #5e2612;
+    color: black;
     padding: 10px;
     visibility: hidden;
   }
+
+  h1 { 
+    text-align: center;
+    color: white; 
+  }
+
+  button{ 
+    background-color: plum;
+    color: white; 
+  }
+
