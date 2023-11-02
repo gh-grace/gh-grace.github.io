@@ -4,43 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style> 
-    button,div {
-        font-family: "helvetica neue", helvetica, sans-serif;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        text-align: center;
-        border: 2px solid rgb(200 200 0 / 0.6);
-        background-color: rgb(0 217 217 / 0.6);
-        color: rgb(100 0 0 / 1);
-        box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
-        border-radius: 10px;
-        padding: 3px 10px;
-        cursor: pointer;
-    }
-    </style>
 </head>
 <body>
-    <button type="button">Player 1: Chris</button>
-    <div id="press">Press me</div>
-    <button id="try">Craxy!</button>
-    <h1 id="text"></h1>
-    <h1 id="hover">They locked me in a room.</h1>
-    <b id="effet"></b>
+    <h2>This button below with make the words become all caps.</h2>    
+    <div id="demo" onclick="myFunction()">click me.</div>
+    <script>
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "CLICK ME!";
+    }
+    </script>
 
-    <script> 
-        document.getElementById("try").addEventListener("click", function{}{
-        document.getElementById("text").innerText = "I was crazy once..."; }); 
-
-        const y = dodcument.getElementById("hover");
-        y.addEventListener("mouseover", RespondMouseOver);
-        y.addEventListener("mouseout", RespondMouseOut);
-        y.addEventListener("mousemove", RespondMouseMove);
-        
-        function RespondMouseOver() { 
-            document.getElementById("effect").innterHTML +=RespondMouseOver    
-                "A rubber room." + "<br>"; 
-            }
+    <h2>The button below will make words appear below it.</h2>
+    <button onclick="mySecondFunction()">Click me.</button>
+    <div id="demolition"onclick="mySecondFunction()"></div>
+    <script>
+    function mySecondFunction() {
+        document.getElementById("demolition").innerHTML = "Hello World!";
+    }
     </script>
 </body>
 </html>
