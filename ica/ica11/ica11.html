@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Start</title>
+
+    <style>
+        .msgBox {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          width: 200px;
+          background: #eee;
+        }
+  
+        .msgBox p {
+          line-height: 1.5;
+          padding: 10px 20px;
+          color: #333;
+        }
+  
+        .msgBox button {
+          background: none;
+          border: none;
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-size: 1.1rem;
+          color: #aaa;
+        }
+  
+    </style>
+</head>
+<body>
+    <button>Display message box</button>
+
+    <script>
+        // store reference button to constant 
+        const btn = document.querySelector("button");
+        // calling code in respone to button being clicked  then call function by name 
+        btn.addEventListener("click", displayMessage);
+        // message box appears without button clicked bc of extra ()
+        // this is called function invocation operator 
+        // use only when you want to run function immediately 
+        // btn.addEventListener("click", displayMessage());
+
+        // sets function and calls it displayMessage
+        function displayMessage(msgText, msgType) {
+            // selects body element using DOM API to get body property of the global doc obj and assigns constant called body 
+            const body = document.body;
+
+            // used DOM API to create div and store reference it as a constant called panel 
+            // this is the outer continer of message box 
+            const panel = document.createElement("div");
+            // another DOM API setting class attribute with a value of msgbox
+            // makes it easier to style element 
+            panel.setAttribute("class", "msgBox");
+            // DOM function on body constnat  
+            // nests one elemnt inside other 
+            // panel div is the child to append inside body elemnt 
+            // this is done as the element we created wont just appear on the page on its own 
+            // specifiys  where we put it 
+            body.appendChild(panel);
+
+            // the next two sections use createElement and appendChild functions to create two new elemetns b and button
+            // they would be the children of the div panel 
+
+            const msg = document.createElement("p");
+            // represent text content of element to insert message 
+            msg.textContent = msgText;
+            panel.appendChild(msg);
+
+            const closeBtn = document.createElement("button");
+            // represent text content of element to insert x inside button 
+            // this button will activate to close message box  
+            closeBtn.textContent = "x";
+            panel.appendChild(closeBtn);
+
+            // add function to be used when close button is clicked 
+            // code will delete whole panel from page to close message box
+            // Node.removeChild () is a DOM API function to remove specific child element
+            btn.addEventListener("click", () => displayMessage("Woo, this is a different message!"),);
+        }
+
+        // the above code makes a block of HTML that looks like 
+        // <div class="msgBox">
+            // <p>This is a message box</p>
+            // <button>x</button>
+        // </div> 
+
+        // this calls the function
+        // displayMessage();
+    </script>
+</body>
+</html>
