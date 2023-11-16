@@ -1,18 +1,22 @@
-const newBtn = document.querySelector('#js-new-quote'). addEventListener('click', getQuote);
-// const questionTxt = document.querySelector('#js-quote-text');
-const answerBtn = document.querySelector('#js-tweet').addEventListener('click', displayAnswer);
+function getQuote () { 
+    const block = document.createElement("h2");
+    const dogFact = fetch("https://dogapi.dog/api/v2/facts", {
+        headers: {
+          "Accept": "application/json"
+        }
+    })
+    .then ((response)) => {return response.json()}    
+    .then ((jsonData)) => {    } 
 
-const questionTxt = document.querySelector('#js-quote-text');
-let answerTxt = document.querySelector('#js-answer-text');
+    // block.setAttribute("id", 'block${tick}')
+    //block.ineerHTML = jsonData["joke"];
 
-let answer = '';
+    console.log(jsonData);
 
-// this is the endpoint for the API that we want to get a response from
-const endpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
 
-async function getQuote () { 
-    // console.lag('Test');
-    
+
+      
+
     // try -> tries something; if it returns an error, it puts us into the catch block
     try { 
         const response = await fetch(endpoint);
