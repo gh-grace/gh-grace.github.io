@@ -1,54 +1,44 @@
-function getQuote () { 
-    const block = document.createElement("h2");
+const btn = document.querySelector("#js-new-fact");
+btn.addEventListener('click', getFact);
+const block = document.querySelector(".fact");
+
+
+function getFact () { 
     const dogFact = fetch("https://dogapi.dog/api/v2/facts", {
         headers: {
           "Accept": "application/json"
         }
     })
-    .then ((response)) => {return response.json()}    
-    .then ((jsonData)) => {    } 
-
+    .then ((response) => {return response.json()})
+    .then ((jsonData) => {
+        console.log(jsonData['data'][0]['attributes']['body'])
+        block.textContent = jsonData['data'][0]['attributes']['body'];
+        buildImage(jsonData["fact"]);
+        setColor();
+        const dogAnswer = document.querySelector('body');
+    })
     // block.setAttribute("id", 'block${tick}')
-    //block.ineerHTML = jsonData["joke"];
+    //block.innerHTML = jsonData["fact"];
+} 
 
-    console.log(jsonData);
+// def buildImage
+function buildImage(fact) {}
 
-
-
-      
-
-    // try -> tries something; if it returns an error, it puts us into the catch block
-    try { 
-        const response = await fetch(endpoint);
-        // if !response.ok is "if the response ISN'T okay (status code 200)"
-        if (!response.ok) { 
-            throw Error(response.statusTest); 
+var count = 1;
+    function setColor() {
+        var property = document.getElementById('js-new-fact');
+        if (count == 0) {
+            property.style.backgroundColor = "#000000"
+            count = 1;        
         }
-        const json = await response.json();
-        
-        // console.log(json); 
-
-        // JSON is a dictionary, which is like a list; we call specific pieces of information out based on the 'key' associated with that value
-        displayQuote(json['question']); 
-        answer = json['answer'];
-        answerTxt.textContent = '';
+        else {
+            property.style.backgroundColor = "#808080"
+            count = 0;
+        }
     }
-    catch(err) { 
-        console.log(err); 
-        alert('Failed to Feth fetch new quote');
-    }
-}
 
-// this function shows the question
-function displayQuote(question) {
-    questionTxt.textContent = question;
-}
-
-// this function shows the answer
-function displayAnswer() {
-    answerTxt.textContent = answer;
-}
-
-// we run getQuote once when the script first loads to populate a question
+// we run getFact once when the script first loads to populate a fact
 // when the page is loading
-getQuote();
+getFact();
+
+setColor();
