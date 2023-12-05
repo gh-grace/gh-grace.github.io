@@ -1,26 +1,11 @@
-function phoneNumber(){
-    let first = ""
-    let second = ""
-    let third = ""
-    let fourth = ""
-    let fifth =""
-    let sixth = ""
-    let seventh =""
-    let eigth = ""
-    let ninth = ""
-    let tenth = ""
-    for(var i=0;i<numbers.length;i++){
-      if(i<3){
-        firstpart.concat(numbers[i].toString())
-      } else if(3<i<6){
-        secondpart.concat(numbers[i].toString())
-      } else if(i>=6){
-        thirdpart.concat(numbers[i].toString())
-      }
-    }
-    return `(${firstpart} ${secondpart}-${thirdpart}`
+function spinWheel() {
+  // generate an angle
+  var randomAngle = Math.floor(Math.random() * 360);
+
+  // set angle for the wheel and arrow
+  document.getElementById('wheel').style.transform = 'rotate(' + randomAngle + 'deg)';
+  document.getElementById('arrow').style.transform = 'translate(-50%, -50%) rotate(' + randomAngle + 'deg)';
 }
 
-createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
-
-console.log(createPhoneNumber);
+// spin the wheel
+spinWheel();
