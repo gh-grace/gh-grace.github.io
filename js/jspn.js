@@ -1,4 +1,4 @@
-// I would like to acknoledge that this code is not fully original and is referenced from 
+// I acknowledge that this code is not fully original and is referenced from 
 // https://medium.com/@victortoschi/how-to-create-a-slot-machine-animation-with-css-and-javascript-9073ab9db9ea 
 // and has been adjusted for this assignment.
 
