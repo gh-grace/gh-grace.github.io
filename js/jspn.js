@@ -123,17 +123,17 @@
     init();
 
     const app = document.querySelector('.app');
-    const button = document.querySelector('.button');
+    const roll = document.querySelector('.roll');
 
     const appMove = app.getBoundingClinetReact(); 
-    const buttonMove = button.getBoundingClientRect();
+    const rollMove = roll.getBoundingClientRect();
 
-    button.addEventListener('hover', () => {
-        const i = Math.floor(Math.random() * (appMove.width - buttonMove.width)) + 1; 
-        const j = Math.floor(Math.random() * (appMove.height - buttonMove.height)) + 1;
+    roll.addEventListener('click', () => {
+        const i = Math.floor(Math.random() * (appMove.width - rollMove.width)) + 1; 
+        const j = Math.floor(Math.random() * (appMove.height - rollMove.height)) + 1;
 
-        button.style.left = i +'px';
-        button.style.top = j +'px';
+        roll.style.left = i +'px';
+        roll.style.top = j +'px';
     });
 
 })();
