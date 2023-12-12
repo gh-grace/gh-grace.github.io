@@ -6,7 +6,7 @@
     const items = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
     const doors = document.querySelectorAll('.door');
-    
+
     // round one 
     // roll rolls 
     // reset resets
@@ -30,7 +30,8 @@
     document.querySelector('#roll3').addEventListener('click', roll3);
     document.querySelector('#reset3').addEventListener('click', spin);
     document.querySelector('#submit3').addEventListener('click', init);
-  
+
+    // this code is for resetting the phone number  
     function init(firstInit = true, groups = 1, duration = 1) {
         for (const door of doors) {
             if (firstInit) {
@@ -82,6 +83,7 @@
         }
     }
   
+    // this function generates a random phone number
     async function spin() {
         init(false, 1, 2);
       
@@ -93,6 +95,7 @@
         }
     }
   
+    // this function does the randome function to land on a number
     function shuffle([...arr]) {
         let m = arr.length;
         while (m) {
@@ -102,6 +105,7 @@
         return arr;
     }
 
+    // round one
     function submit() {
         confirm("You have SUCCESSFULLY submitted your phone number!");
     }
@@ -118,4 +122,18 @@
 
     init();
 
-  })();
+    const app = document.querySelector('.app');
+    const button = document.querySelector('.button');
+
+    const appMove = app.getBoundingClinetReact(); 
+    const buttonMove = button.getBoundingClientRect();
+
+    button.addEventListener('hover', () => {
+        const i = Math.floor(Math.random() * (appMove.width - buttonMove.width)) + 1; 
+        const j = Math.floor(Math.random() * (appMove.height - buttonMove.height)) + 1;
+
+        button.style.left = i +'px';
+        button.style.top = j +'px';
+    });
+
+})();
