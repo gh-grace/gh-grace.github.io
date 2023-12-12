@@ -122,18 +122,19 @@
 
     init();
 
-    const app = document.querySelector('.app');
-    const roll = document.querySelector('.roll');
+    // trying to make the buttons move
+    // const app = document.querySelector('.app');
+    // const roll = document.querySelector('.roll');
 
-    const appMove = app.getBoundingClinetReact(); 
-    const rollMove = roll.getBoundingClientRect();
+    // const appMove = app.getBoundingClientRect(); 
+    // const rollMove = roll.getBoundingClientRect();
 
-    roll.addEventListener('click', () => {
-        const i = Math.floor(Math.random() * (appMove.width - rollMove.width)) + 1; 
-        const j = Math.floor(Math.random() * (appMove.height - rollMove.height)) + 1;
+    //  roll.addEventListener('click', () => {
+    //  const i = Math.floor(Math.random() * (appMove.width - rollMove.width)) + 1; 
+    //  const j = Math.floor(Math.random() * (appMove.height - rollMove.height)) + 1;
 
-        roll.style.left = i +'px';
-        roll.style.top = j +'px';
-    });
+        // roll.style.left = i +'px';
+        // roll.style.top = j +'px';
+    // });
 
 })();

@@ -1,26 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+
 body {
     width: 100vw;
     height: 70vh;
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
     color: white; 
-    background-color: #1b3e75;
+    background-color:#1a2b45;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Balsamiq Sans', cursive;
 }
-  
+
+#sign { 
+    margin-top: 100px;
+    margin-left: 350px; 
+    width: 50vw;
+    height: 10vw;
+    background-color: purple; 
+    border-radius: 100px 100px 0 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#machine {
+    margin-left: 80px;
+    width: 85vw;
+    height: 30vw;
+    background: #1b3e75;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #app {
-    width: 98%;
-    height: 80%;
-    background: #1a2b45;
-    border-radius: 90%;
+    width: 80vw;
+    height: 25vw;
+    background: #4067a7;
     border-style: groove;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-  
+
 .doors {
     display: flex;
 }
@@ -29,7 +56,6 @@ body {
     width: 100px;
     height: 110px;
     overflow: hidden;
-    border-radius: 5px;
     margin: 5px;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -56,11 +82,12 @@ button {
     font-size: 1.2rem;
     margin: 0 0.2rem;
     border: none;
-    border-radius: 5px;
     padding: 10px 15px;
     background-color: rgb(255, 120, 47);
     font-family: 'Courier New', Courier, monospace;
     color: white; 
+    justify-content: center;
+    align-items: center;
 }
   
 .info {
@@ -70,7 +97,18 @@ button {
     text-align: center;
 }
 
+h1 { 
+    text-align: center;
+    font-size: 50px; 
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 2px; 
+}
+
 p { 
     text-align: center;
-    font-size: xx-large; 
+    font-size: 30px; 
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
 }
