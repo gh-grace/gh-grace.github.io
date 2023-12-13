@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
 
 body {
-    width: 100vw;
-    height: 70vh;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 80vh;
+    font-family: 'Balsamiq Sans', cursive;
     color: white; 
     background-color:black;
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    font-family: 'Balsamiq Sans', cursive;
 }
 
 #sign { 
     margin-top: 100px;
     margin-left: 350px; 
     width: 50vw;
-    height: 10vw;
-    background-color: goldenrod; 
+    height: 18vh;
+    background-color: rgb(255, 188, 17); 
     border-radius: 100px 100px 0 0; 
     display: flex;
     flex-direction: column;
@@ -27,10 +27,21 @@ body {
 }
 
 #machine {
-    margin-left: 80px;
-    width: 85vw;
-    height: 30vw;
+    margin-left: 92px; 
+    width: 84vw;
+    height: 56vh;
     background: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#lights { 
+    width: 82vw;
+    height: 53vh;
+    background: red;
+    border-style: dotted; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +50,7 @@ body {
 
 #app {
     width: 80vw;
-    height: 25vw;
+    height: 50vh;
     background: red;
     border-style: groove;
     border-color: black;
@@ -54,11 +65,11 @@ body {
 }
   
 .door {
+    margin: 5px;
     width: 100px;
     height: 110px;
-    overflow: hidden;
-    margin: 5px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Courier New', Courier, monospace;
+    overflow: hidden; 
 }
   
 .boxes {
@@ -66,12 +77,12 @@ body {
 }
   
 .box {
+    background-color: black;
+    font-size: 3rem;
+    color: white; 
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-    background-color: black;
-    color: white; 
 }
   
 .buttons {
@@ -79,36 +90,36 @@ body {
 }
   
 button {
-    cursor: pointer;
-    font-size: 1.2rem;
     margin: 0 0.2rem;
-    border: none;
     padding: 10px 15px;
-    background-color: goldenrod;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.2rem;
     color: white; 
+    background-color: rgb(255, 188, 17);
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
   
 .info {
-    position: fixed;
     bottom: 0;
     width: 100%;
+    bottom: 0;
+    position: fixed;
     text-align: center;
 }
 
 h1 { 
-    text-align: center;
     font-size: 50px; 
+    text-align: center;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: white;
     -webkit-text-stroke-width: 2px; 
 }
 
 p { 
-    text-align: center;
     font-size: 30px; 
+    text-align: center;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: white;
     -webkit-text-stroke-width: 1px;

@@ -7,7 +7,6 @@
 
     const doors = document.querySelectorAll('.door');
 
-    // round one 
     // roll rolls 
     // reset resets
     // sumbit states that the phone number successfully submitted 
@@ -67,7 +66,7 @@
         }
     }
   
-    // this function generates a random phone number
+    // this code is for rolling the phone number
     async function spin() {
         init(false, 1, 2);
       
@@ -79,7 +78,7 @@
         }
     }
   
-    // this function does the randome function to land on a number
+    // this code is for the shuffling of the numbers
     function shuffle([...arr]) {
         let m = arr.length;
         while (m) {
@@ -89,6 +88,7 @@
         return arr;
     }
 
+    // this code is for submitting the phone number
     function submit() {
         confirm("You have SUCCESSFULLY submitted your phone number!");
     }
