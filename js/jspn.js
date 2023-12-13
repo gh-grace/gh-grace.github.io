@@ -15,22 +15,6 @@
     document.querySelector('#reset').addEventListener('click', init);
     document.querySelector('#submit').addEventListener('click', submit);
 
-    // round two 
-    // roll2 resets 
-    // reset2 states that the phone number is incorrect 
-    // submit2 rolls 
-    document.querySelector('#roll2').addEventListener('click', init);
-    document.querySelector('#reset2').addEventListener('click', submit2);
-    document.querySelector('#submit2').addEventListener('click', spin);
-
-    // round three
-    // roll3 states that the phone number does not exist 
-    // reset3 rolls 
-    // submit3 resets
-    document.querySelector('#roll3').addEventListener('click', roll3);
-    document.querySelector('#reset3').addEventListener('click', spin);
-    document.querySelector('#submit3').addEventListener('click', init);
-
     // this code is for resetting the phone number  
     function init(firstInit = true, groups = 1, duration = 1) {
         for (const door of doors) {
@@ -105,19 +89,8 @@
         return arr;
     }
 
-    // round one
     function submit() {
         confirm("You have SUCCESSFULLY submitted your phone number!");
-    }
-
-    // round two 
-    function submit2() {
-        confirm("You have INCORRECTLY submitted your phone number!");
-    }
-
-    // round three 
-    function roll3() {
-        confirm("That phone number does NOT exist in this world!");
     }
 
     init();
