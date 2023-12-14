@@ -1,6 +1,5 @@
 // I acknowledge that this code is not fully original and is referenced from 
-// https://medium.com/@victortoschi/how-to-create-a-slot-machine-animation-with-css-and-javascript-9073ab9db9ea 
-// and has been adjusted for this assignment.
+// https://medium.com/@victortoschi/how-to-create-a-slot-machine-animation-with-css-and-javascript-9073ab9db9ea.
 
 (function () {
     // blinking sign 
@@ -32,7 +31,7 @@
   
         const boxes = door.querySelector('.boxes');
         const boxesClone = boxes.cloneNode(false);
-        const pool = ['❓'];
+        const pool = ['?'];
   
         if (!firstInit) {
             const arr = [];
@@ -86,14 +85,14 @@
         }
         
         // blinking reset 
-        var blink_speed = 350; 
+        var blink_speed = 500; 
         var t = setInterval(function () {
             var ele = document.getElementById('reset');
             ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
         }, blink_speed); 
 
         // blinking submit 
-        var blink_speed = 350; 
+        var blink_speed = 500; 
         var t = setInterval(function () {
             var ele = document.getElementById('submit');
             ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
@@ -107,12 +106,26 @@
             const i = Math.floor(Math.random() * m--);
             [arr[m], arr[i]] = [arr[i], arr[m]];
         }
+        // outputs the numbers 
         return arr;
     }
 
     // this code is for submitting the phone number
-    function submit() {
-        confirm("You have SUCCESSFULLY submitted your phone number!");
+    function submit() {   
+        let correct = true;
+        boxesArr = document.querySelectorAll(".boxes .box")  
+
+        for (const box of boxesArr) {
+            if (box.textContent === "?") {
+                correct = false;
+            } 
+        }
+
+        if(correct === true){
+            confirm("You have SUCCESSFULLY submitted your phone number!");
+        } else {
+            confirm("You have INSUCCESSFULLY submitted your phone number!");
+        }  
     }
 
     init();
