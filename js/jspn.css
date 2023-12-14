@@ -44,9 +44,7 @@ body {
 #sign3 { 
     width: 46vw;
     height: 14vh;
-    background-color: black; 
-    border-style: dotted;
-    border-color: black;
+    background-color: red; 
     border-radius: 100px 100px 0 0; 
     display: flex;
     flex-direction: column;
@@ -96,17 +94,6 @@ body {
     position: absolute;
 }
 
-.stick3 {
-    margin-top: 20px;
-    margin-left: 22px; 
-    width: 1.25vw;
-    height: 15vh;
-    background: rgb(255, 188, 17);
-    border-style: groove;
-    border-color: black;
-    position: absolute;
-}
-
 .stick3 { 
     margin-top: 40px;
     margin-left: 44px; 
@@ -128,7 +115,7 @@ body {
     border-color: black;
 }
 
-.ball {
+.balls {
     margin-top: -129px;
     margin-left: 30px;
     width: 50px;

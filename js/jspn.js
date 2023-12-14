@@ -3,6 +3,13 @@
 // and has been adjusted for this assignment.
 
 (function () {
+    // blinking sign 
+    var blink_speed = 500; 
+    var t = setInterval(function () {
+        var ele = document.getElementById('sign3');
+        ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
+    }, blink_speed); 
+    
     const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
     const doors = document.querySelectorAll('.door');
@@ -77,6 +84,20 @@
             boxes.style.transform = 'translateY(0)';
         await new Promise((resolve) => setTimeout(resolve, duration * 100));
         }
+        
+        // blinking reset 
+        var blink_speed = 350; 
+        var t = setInterval(function () {
+            var ele = document.getElementById('reset');
+            ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
+        }, blink_speed); 
+
+        // blinking submit 
+        var blink_speed = 350; 
+        var t = setInterval(function () {
+            var ele = document.getElementById('submit');
+            ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
+        }, blink_speed); 
     }
   
     // this code is for the shuffling of the numbers
@@ -95,20 +116,5 @@
     }
 
     init();
-
-    // trying to make the buttons move
-    // const app = document.querySelector('.app');
-    // const roll = document.querySelector('.roll');
-
-    // const appMove = app.getBoundingClientRect(); 
-    // const rollMove = roll.getBoundingClientRect();
-
-    //  roll.addEventListener('click', () => {
-    //  const i = Math.floor(Math.random() * (appMove.width - rollMove.width)) + 1; 
-    //  const j = Math.floor(Math.random() * (appMove.height - rollMove.height)) + 1;
-
-        // roll.style.left = i +'px';
-        // roll.style.top = j +'px';
-    // });
 
 })();
