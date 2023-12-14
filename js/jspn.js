@@ -5,10 +5,6 @@
 (function () {
     const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
-    items.forEach(function(number) {
-        document.write('<p class="red-text">' + number + '</p>');
-    });
-
     const doors = document.querySelectorAll('.door');
 
     // roll rolls 
@@ -61,6 +57,7 @@
             box.style.width = door.clientWidth + 'px';
             box.style.height = door.clientHeight + 'px';
             box.textContent = pool[i];
+            box.classList.add('red'); 
             boxesClone.appendChild(box);
         }
         
