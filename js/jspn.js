@@ -3,7 +3,11 @@
 // and has been adjusted for this assignment.
 
 (function () {
-    const items = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+    const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+    items.forEach(function(number) {
+        document.write('<p class="red-text">' + number + '</p>');
+    });
 
     const doors = document.querySelectorAll('.door');
 
@@ -25,7 +29,7 @@
   
         const boxes = door.querySelector('.boxes');
         const boxesClone = boxes.cloneNode(false);
-        const pool = ['?'];
+        const pool = ['❓'];
   
         if (!firstInit) {
             const arr = [];

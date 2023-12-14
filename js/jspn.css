@@ -77,7 +77,7 @@ body {
 }
   
 .box {
-    background-color: black;
+    background-color: rgb(255, 188, 17);
     font-size: 3rem;
     color: white; 
     display: flex;
@@ -123,4 +123,8 @@ p {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: white;
     -webkit-text-stroke-width: 1px;
+}
+
+.red {
+    color: red; 
 }
